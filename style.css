@@ -60,26 +60,6 @@ button{
     background-color: rgb(0, 162, 255);
 }
 
-#addMenNames{
-    /* display: flex; */
-    
-}
-
-#addWomenNames{
-    /* display: flex; */
-    
-}
-
-#addMenForm{
-    /* display: flex;
-    flex-wrap: wrap; */
-}
-
-#addWomenForm{
-    /* display: flex;
-    flex-wrap: wrap; */
-}
-
 .nameInput{
     background-color: aliceblue;
     margin: 1vh auto;
@@ -120,9 +100,19 @@ button{
     text-align: center;
 }
 
+#addMenPrefer button{
+    padding: 0.3em 1em;
+    font-size: medium;
+}
+
 #addWomenPrefer{
     display: none;
     text-align: center;
+}
+
+#addWomenPrefer button{
+    padding: 0.3em 1em;
+    font-size: medium;
 }
 
 #resultBtn{
@@ -148,14 +138,6 @@ button{
    border: 2px solid rgb(31, 31, 31); 
    padding: 0.1em 0.5em;
    font-size: 1.2em;
-}
-
-.resultTable th{
-
-}
-
-.resultTable td{
-    
 }
 
 /* The Modal (background) */

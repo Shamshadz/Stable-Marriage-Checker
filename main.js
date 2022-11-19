@@ -80,7 +80,6 @@ function addNames(event){
 
     for(var i=0;i<N;i++){
         let addName = document.getElementById(`addWomenName${i}`).value;
-        console.log(addName);
         dict[i+N] = addName;
     }
     console.log(dict);
@@ -207,6 +206,31 @@ function selectWomenPreference(input){
     console.log(valuePerson);
 }
 
+// Get the preference choice modal
+function preferModal(){
+    var modal = document.getElementById("myModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+}
+
+var prefer = new Array(2*N);
+
 // Algorithm starts here   
 function wPrefersM1OverM(N,prefer, w, m, m1){
     for (var i = 0; i < N; i++) {
@@ -278,29 +302,3 @@ function stableMarriage(M,prefer){
                                 </tr>`
         console.log(" " + (dict[i+N]) + "   " + dict[wPartner[i]])
 };   
-
-var prefer = new Array(2*N);
-
-
-// Get the preference choice modal
-function preferModal(){
-    var modal = document.getElementById("myModal");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    modal.style.display = "block";
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-    modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    }
-}
