@@ -9,13 +9,13 @@ addNoPeople = (event) => {
     event.preventDefault();
 
     N = document.getElementById('noPeople').value;
-    
+
     if(Object.keys(dict).length){
         dict = {}
     }
 
     prefer = []
-    
+
     let opt = document.getElementById('addMenPrefer');
     try{
         while (opt.hasChildNodes()) {
@@ -32,6 +32,8 @@ addNoPeople = (event) => {
     }
     catch(e){}
 
+    document.getElementById("resultDiv").style.display = "none";
+    document.getElementById('resultBtn').style.display = "none";
     document.getElementById('dispMenNames').style.display = 'none';
     document.getElementById('dispWomenNames').style.display = 'none';
 
@@ -53,10 +55,12 @@ addNoPeople = (event) => {
 
     for(var i=0;i<N;i++){
         const div = document.getElementById("addMenForm");
+        console.log(i)
         div.innerHTML += `<input id="addMenName${i}" class="nameInput" type="text" required />`
     }
 
     for(var i=0;i<N;i++){
+        console.log(i)
         const div = document.getElementById("addWomenForm");
         div.innerHTML +=  `<input id="addWomenName${i}" class="nameInput" type="text" required />`
     }
@@ -90,15 +94,18 @@ function addNames(event){
 
 // result func
 getResult = () => {
-    stableMarriage(N,prefer);
+    try{
+        stableMarriage(N,prefer);
+    }
+    catch(e){
+        console.log(e);
+        alert("Choose all preference");
+    }
     document.getElementById("resultDiv").style.display = "block";
 }
 
 // add preference div and display prefernce btn
 function addPrefer(dict){
-
-    document.getElementById('addMenNames').style.display = 'none';
-    document.getElementById('addWomenNames').style.display = 'none';
 
     const div = document.getElementById("dispMenNamesForm");
     try{
@@ -252,9 +259,6 @@ function stableMarriage(M,prefer){
         }
     }
     catch(e){}
-        
-    // for (var i = 0; i < N; i++)
-    //     resultTable.innerHTML -= ``
 
     var wPartner = new Array(N);
     mFree = new Array(N);
@@ -295,10 +299,9 @@ function stableMarriage(M,prefer){
                             </tr>`
     console.log("Woman	 Man");
     for (var i = 0; i < N; i++)
-        // console.log(" " + (i + N) + "	 " + wPartner[i]);
         resultTable.innerHTML += `<tr>
                                     <td>${dict[i+N]}</td>
                                     <td>${dict[wPartner[i]]}</td>
                                 </tr>`
-        console.log(" " + (dict[i+N]) + "   " + dict[wPartner[i]])
+
 };   
