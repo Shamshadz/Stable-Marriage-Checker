@@ -99,6 +99,9 @@ getResult = () => {
         stableMarriage(N,prefer);
         error = document.querySelector('.resultErr');
         error.style.display = "none";
+        console.log(prefer);
+        makefile(prefer);
+        document.getElementById("resultDiv").style.display = "block";
     }
     catch(e){
         console.log(e);
@@ -106,9 +109,7 @@ getResult = () => {
         error.style.display = "block";
         error.textContent = "Choose all Preference for all Mens and Womens"
         error.style.color = "red"
-
     }
-    document.getElementById("resultDiv").style.display = "block";
 }
 
 // add preference div and display prefernce btn
@@ -312,3 +313,22 @@ function stableMarriage(M,prefer){
                                 </tr>`
 
 };   
+
+
+function makefile(prefer){
+    document.getElementById("download-btn").style.display = "block";
+    document.getElementById("download-btn").addEventListener("click",function(){
+        
+        var content = prefer;
+        // any kind of extension (.txt,.cpp,.cs,.bat)
+        var filename = "hello.txt";
+
+        // create a new blob with the specific content
+        var blob = new Blob([content], {
+            type: "text/plain;charset=utf-8"
+        });
+
+        // use library to generate download (saveAs)
+        saveAs(blob, filename);
+    },false);
+}
