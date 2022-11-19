@@ -4,6 +4,7 @@
 }
 
 h1{
+    text-align: center;
     color: blue;
 }
 
@@ -13,18 +14,43 @@ h1{
 }
 
 #addNames{
-    text-align: center;
     display: none;
+    text-align: center;
     color: rgb(0, 255, 98);
-    display: flex;
+    /* display: flex; */
+}
+
+#addNames button{
+    padding: 0.2em;
+    margin: 0.3em;
 }
 
 #addMenNames{
-    display: none;
+    /* display: flex; */
+    
 }
 
 #addWomenNames{
-    display: none;
+    /* display: flex; */
+    
+}
+
+#addMenForm{
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+#addWomenForm{
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.nameInput{
+    background-color: aliceblue;
+    margin: 1vh auto;
+    display: block;
+    border-radius: 1em;
+    padding: 0.3em 1em;
 }
 
 #dispMenNames{
@@ -35,6 +61,22 @@ h1{
 #dispWomenNames{
     display: none;
     text-align: center;
+}
+
+#dispMenNamesForm p{
+    font-size: 2em;
+}
+
+#dispWomenNamesForm p{
+    font-size: 2em;
+}
+
+#dispMenNamesForm button{
+    font-size: 1em;
+}
+
+#dispWomenNamesForm button{
+    font-size: 1em;
 }
 
 #addMenPrefer{
@@ -50,5 +92,11 @@ h1{
 #resultBtn{
     /* display: none; */
     text-align: center;
-    background-color: blueviolet;
+    /* padding: 0.3em; */
+    /* background-color: blueviolet; */
+}
+
+#resultBtn button{
+    padding: 0.2em;
+    margin: 0.3em;
 }

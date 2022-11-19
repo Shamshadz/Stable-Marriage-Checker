@@ -27,8 +27,8 @@ addNoPeople = (event) => {
     document.getElementById('dispMenNames').style.display = 'none';
     document.getElementById('dispWomenNames').style.display = 'none';
 
-    document.getElementById('addMenNames').style.display = 'block';
-    document.getElementById('addWomenNames').style.display = 'block';
+    // document.getElementById('addMenNames').style.display = 'block';
+    // document.getElementById('addWomenNames').style.display = 'block';
 
     for(var i=0;i<N;i++){
         const div = document.getElementById("addMenForm");
@@ -42,12 +42,12 @@ addNoPeople = (event) => {
 
     for(var i=0;i<N;i++){
         const div = document.getElementById("addMenForm");
-        div.innerHTML += `<input id="addMenName${i}" type="text" required>`
+        div.innerHTML += `<input id="addMenName${i}" class="nameInput" type="text" required>`
     }
 
     for(var i=0;i<N;i++){
         const div = document.getElementById("addWomenForm");
-        div.innerHTML +=  `<input id="addWomenName${i}" type="text" required>`
+        div.innerHTML +=  `<input id="addWomenName${i}" class="nameInput" type="text" required>`
     }
 
     for(var i=0;i<2*N;i++){
@@ -72,6 +72,7 @@ function addNames(){
     }
     console.log(dict);
     addPrefer(dict);
+    // document.getElementById('addNames').style.display= "none";
     result = document.getElementById('resultBtn').style.display = "block";
 }
 
