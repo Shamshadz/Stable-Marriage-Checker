@@ -18,37 +18,39 @@
         </form>
     </div>
     
-    <div id="addMenNames">
-        <h3>Mens Names</h3>
-        <div id="addMenForm">
 
+    <div id="addNames">
+        <div id="addMenNames">
+            <h3>Mens Names</h3>
+            <div id="addMenForm">
+
+            </div>
         </div>
+
+        <div id="addWomenNames">
+            <h3>Women Names</h3>
+            <div id="addWomenForm">
+
+            </div>
+        </div>
+
+        <button onclick="addNames(event)">Add Men and Women</button>
     </div>
 
-    <div id="addWomenNames">
-        <h3>Women Names</h3>
-        <div id="addWomenForm">
+    <div>
+        <div id="dispMenNames">
+            <h3>Mens Preference</h3>
+            <div id="dispMenNamesForm">
 
+            </div>
         </div>
-        <button onclick="addNames(event)"> Add Men and Women</button>
-    </div>
 
-    <div id="dispMenNames">
-        <h3>Mens Preference</h3>
-        <div id="dispMenNamesForm">
-
+        <div id="dispWomenNames">
+            <h3>Womens Preference</h3>
+            <div id="dispWomenNamesForm">
+                
+            </div>
         </div>
-    </div>
-
-    <div id="dispWomenNames">
-        <h3>Womens Preference</h3>
-        <div id="dispWomenNamesForm">
-            
-        </div>
-    </div>
-
-    <div id="resultBtn">
-        <button onclick="getResult()">Get Result</button>
     </div>
 
     <div id="addMenPrefer">
@@ -61,7 +63,9 @@
             
     </div>
 
-
+    <div id="resultBtn">
+        <button onclick="getResult()">Get Result</button>
+    </div>
     
     <script src="main.js" type="text/javascript"></script>
 </body>

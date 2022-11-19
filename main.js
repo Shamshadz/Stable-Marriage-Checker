@@ -5,13 +5,14 @@ var prefer = [];
 
 addNoPeople = (event) => {
     event.preventDefault();
-    noPeople = document.getElementById('noPeople').value;
-    N = noPeople;
+
+    N = document.getElementById('noPeople').value;
+    
     if(Object.keys(dict).length){
         dict = {}
     }
+
     prefer = []
-    result = document.getElementById('resultBtn').style.display = "block";
     
     let opt = document.getElementById('addMenPrefer');
     for(var i=N;i<2*N;i++){
@@ -53,6 +54,8 @@ addNoPeople = (event) => {
         prefer.push([]);
     }
 
+    document.getElementById('addNames').style.display = "block";
+
 }
 
 function addNames(){
@@ -69,12 +72,10 @@ function addNames(){
     }
     console.log(dict);
     addPrefer(dict);
-    // makePrefer(dict);
+    result = document.getElementById('resultBtn').style.display = "block";
 }
 
-
 getResult = () => {
-    // makePrefer(N,prefer);
     stableMarriage(N,prefer);
 }
 
@@ -110,13 +111,11 @@ function addPrefer(dict){
 
     let opt = document.getElementById('addMenPrefer');
     for(var i=N;i<2*N;i++){
-        // opt.innerHTML +=`<option value="${i}">${dict[i]}</option>`
         opt.innerHTML += `<button class="preferBtn" ondblclick="makePrefer(this)" onclick="removePrefer(this)" value="${i}" style="background-color:yellow;">${dict[i]}</button>`
     }  
 
     let opt1 = document.getElementById('addWomenPrefer');
     for(var i=0;i<N;i++){
-        // opt1.innerHTML +=`<option value="${i}">${dict[i]}</option>`
         opt1.innerHTML += `<button class="preferBtn" ondblclick="makePrefer(this)" onclick="removePrefer(this)" value="${i}" style="background-color:yellow;">${dict[i]}</button>`
     } 
 }
@@ -178,9 +177,9 @@ function selectWomenPreference(input){
     console.log(valuePerson);
 }
 
-
 // Algorithm starts here
-function wPrefersM1OverM(N,prefer, w, m, m1) {
+    
+function wPrefersM1OverM(N,prefer, w, m, m1){
     for (var i = 0; i < N; i++) {
         if (prefer[w][i] == m1)
             return true;
@@ -190,7 +189,7 @@ function wPrefersM1OverM(N,prefer, w, m, m1) {
     }
 };
 
-function stableMarriage(M,prefer) {
+function stableMarriage(M,prefer){
 
     let N = parseInt(M);
     var wPartner = new Array(N);
@@ -229,9 +228,10 @@ function stableMarriage(M,prefer) {
     console.log("Woman	 Man");
     for (var i = 0; i < N; i++)
         console.log(" " + (i + N) + "	 " + wPartner[i]);
-};
 
+};   
 
+var prefer = new Array(2*N);
 
 // var prefer = [[7, 5, 6, 4],
 //              [5, 4, 6, 7],
@@ -242,5 +242,3 @@ function stableMarriage(M,prefer) {
 //              [0, 1, 2, 3],
 //              [0, 1, 2, 3],
 //              ];
-
-var prefer = new Array(2*N);
