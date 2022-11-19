@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StableMarriages.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Don't Worry Everything will be Fine!</h1>
+    <div class="container">
+        <h3>Input no. of men or women in given field</h3>
+        <form onsubmit="addNoPeople(event)">
+            <input id="noPeople" type="number">
+            <button>Add</button>
+        </form>
+    </div>
+    
+    <div id="addMenNames">
+        <h3>Mens Names</h3>
+        <div id="addMenForm">
+
+        </div>
+    </div>
+
+    <div id="addWomenNames">
+        <h3>Women Names</h3>
+        <div id="addWomenForm">
+
+        </div>
+        <button onclick="addNames(event)"> Add Men and Women</button>
+    </div>
+
+    <div id="dispMenNames">
+        <h3>Mens Preference</h3>
+        <div id="dispMenNamesForm">
+
+        </div>
+    </div>
+
+    <div id="dispWomenNames">
+        <h3>Womens Preference</h3>
+        <div id="dispWomenNamesForm">
+            
+        </div>
+    </div>
+
+    <div id="resultBtn">
+        <button onclick="getResult()">Get Result</button>
+    </div>
+
+    <div id="addMenPrefer">
+        <label for="Mens">Choose a Preference:</label>
+            
+    </div>
+
+    <div id="addWomenPrefer">
+        <label for="Mens">Choose a Preference:</label>
+            
+    </div>
+
+
+    
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>
