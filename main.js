@@ -32,6 +32,7 @@ addNoPeople = (event) => {
     }
     catch(e){}
 
+    error = document.querySelector('.resultErr').style.display = "none";
     document.getElementById("resultDiv").style.display = "none";
     document.getElementById('resultBtn').style.display = "none";
     document.getElementById('dispMenNames').style.display = 'none';
@@ -96,10 +97,17 @@ function addNames(event){
 getResult = () => {
     try{
         stableMarriage(N,prefer);
+        error = document.querySelector('.resultErr');
+        error.style.display = "none";
     }
     catch(e){
         console.log(e);
         alert("Choose all preference");
+        error = document.querySelector('.resultErr');
+        error.style.display = "block";
+        error.textContent = "Choose all Preference for all Mens and Womens"
+        error.style.color = "red"
+
     }
     document.getElementById("resultDiv").style.display = "block";
 }

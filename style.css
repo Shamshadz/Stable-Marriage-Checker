@@ -69,6 +69,21 @@ button{
     margin: 0.3em 2em;
 }
 
+.dispNames h3{
+    color: rgb(30, 44, 44);
+}
+
+.dispNames p{
+    /* text-align: center; */
+    margin: auto;
+    width: 6em;
+    border: 1px solid black;
+    color: rgb(0, 146, 146);
+}
+
+.dispNames button{
+    background-color: aqua;
+}
 #dispMenNames{
     display: none;
     text-align: center;
@@ -138,6 +153,11 @@ button{
    border: 2px solid rgb(31, 31, 31); 
    padding: 0.1em 0.5em;
    font-size: 1.2em;
+}
+
+.resultErr{
+    display: none;
+    text-align: center;
 }
 
 /* The Modal (background) */
