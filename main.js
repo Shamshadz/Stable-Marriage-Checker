@@ -100,7 +100,7 @@ getResult = () => {
         error = document.querySelector('.resultErr');
         error.style.display = "none";
         console.log(prefer);
-        makefile(prefer);
+        makefile(prefer,dict);
         document.getElementById("resultDiv").style.display = "block";
     }
     catch(e){
@@ -314,12 +314,23 @@ function stableMarriage(M,prefer){
 
 };   
 
-
-function makefile(prefer){
+function makefile(prefer,dict){
     document.getElementById("download-btn").style.display = "block";
+
+    var l = prefer.length;
+    var content = {};
+    for(var i=0;i<l;i++){
+        var con = "";
+        for(var j=0;j<l/2;j++){
+            con = con + `${j+1}. ${dict[prefer[i][j]]} | `;
+        }
+        content[dict[i]] = con;
+    }
+    console.log(content)
+    
     document.getElementById("download-btn").addEventListener("click",function(){
         
-        var content = prefer;
+        // var content = prefer;
         // any kind of extension (.txt,.cpp,.cs,.bat)
         var filename = "hello.txt";
 
