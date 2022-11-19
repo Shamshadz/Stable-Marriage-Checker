@@ -15,29 +15,31 @@
     <div class="container">
         <h3>Input no. of men or women in given field</h3>
         <form onsubmit="addNoPeople(event)">
-            <input id="noPeople" type="number">
+            <input id="noPeople" type="number" min="1" max="10" value="1" required>
             <button>Add</button>
         </form>
     </div>
     
     <!-- add Names div -->
     <div id="addNames">
-        <div>
-            <h3>Mens Names</h3>
-            <div id="addMenNames">
-                <div id="addMenForm">
+        <form onsubmit="addNames(event)">
+            <div>
+                <h3>Mens Names</h3>
+                <div id="addMenNames">
+                    <div id="addMenForm">
 
+                    </div>  
+                </div>
+
+                <h3>Women Names</h3>
+                <div id="addWomenNames">
+                    <div id="addWomenForm">
+
+                    </div>
                 </div>
             </div>
-
-            <h3>Women Names</h3>
-            <div id="addWomenNames">
-                <div id="addWomenForm">
-
-                </div>
-            </div>
-        </div>
-        <button onclick="addNames(event)">Add Men and Women</button>
+            <button>Add Men and Women</button>
+        </form>
     </div>
 
     <!-- display name after entering all names -->
