@@ -62,9 +62,16 @@ nav ul a:hover{
 }
 
 .info-container-child2 div:nth-child(1){
-    width: 50vw;
+    width: 40vw;
     padding: 2em 0em;
 }
+
+@media only screen and (max-width: 800px) {
+    .info-container-child2 div:nth-child(1){
+        width: 80vw;
+        padding: 2em 0em;
+    }
+  }
 
 .info-container img{
     height: 20em;
