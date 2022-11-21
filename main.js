@@ -338,7 +338,7 @@ function makefile(prefer,dict,resultContent){
         
         // var content = prefer;
         // any kind of extension (.txt,.cpp,.cs,.bat)
-        var filename = "hello.txt";
+        var filename = "stable-marriage"+Math.floor(Math.random()*1000)+".txt";
 
         // create a new blob with the specific content
         var blob = new Blob([content], {
