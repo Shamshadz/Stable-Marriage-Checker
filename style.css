@@ -4,7 +4,23 @@
     font-family: Nunito, cursive;
 }
 
-h1{
+.nav-bar{
+    background-color: rgb(86, 102, 136);
+    height: 3.5em;
+}
+
+.nav-bar a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.info-div{
+    background-color: beige;
+}
+
+.algorithm-div h1{
     margin: 0 1em;
     text-align: center;
     color: rgba(0, 0, 255, 0.658);
@@ -96,6 +112,7 @@ button{
 .dispNames button{
     background-color: aqua;
 }
+
 #dispMenNames{
     display: none;
     text-align: center;
@@ -222,4 +239,8 @@ button{
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+    background-color: royalblue;
 }
