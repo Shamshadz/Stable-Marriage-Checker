@@ -54,13 +54,14 @@ nav ul a:hover{
     justify-content: center;
 }
 
-.info-container p{
-    width: 100%;
+.info-container-child2 p{
+    width: 50vw;
+    padding: 2em 0em;
 }
 
 .info-container img{
-    height: 10em;
-    width: 10em;
+    height: 20em;
+    width: 20em;
 }
 
 .algorithm-div h1{
