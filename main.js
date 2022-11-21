@@ -108,7 +108,7 @@ getResult = () => {
         error = document.querySelector('.resultErr');
         error.style.display = "block";
         error.textContent = "Choose all Preference for all Mens and Womens"
-        error.style.color = "red"
+        error.style.color = "white"
     }
 }
 
