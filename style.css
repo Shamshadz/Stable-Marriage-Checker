@@ -4,20 +4,63 @@
     font-family: Nunito, cursive;
 }
 
-.nav-bar{
-    background-color: rgb(86, 102, 136);
-    height: 3.5em;
+nav{
+    background-color: aqua;
+    display: flex;
 }
 
-.nav-bar a{
+.nav-bar-logo{
     font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.5em 1em;
+}
+
+nav a{
     text-decoration: none;
     color: black;
-    
+}
+
+nav ul{
+    background-color: gray;
+    display: flex;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin: 1em 1em;
+    font-size: 1.2em;
+}
+
+nav ul a:hover{
+    color: rgb(153, 51, 51);
 }
 
 .info-div{
     background-color: beige;
+    /* margin: 2em auto; */
+}
+
+.info-container{
+    width: 90%;
+    margin: auto;
+}
+
+.info-container-child2{
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%; 
+    justify-content: center;
+}
+
+.info-container p{
+    width: 100%;
+}
+
+.info-container img{
+    height: 10em;
+    width: 10em;
 }
 
 .algorithm-div h1{
