@@ -96,11 +96,11 @@ function addNames(event){
 // result func
 getResult = () => {
     try{
-        stableMarriage(N,prefer);
+        resultContent = stableMarriage(N,prefer);
         error = document.querySelector('.resultErr');
         error.style.display = "none";
         console.log(prefer);
-        makefile(prefer,dict);
+        makefile(prefer,dict,resultContent);
         document.getElementById("resultDiv").style.display = "block";
     }
     catch(e){
@@ -306,27 +306,33 @@ function stableMarriage(M,prefer){
                                 <th>Mens</th>
                             </tr>`
     console.log("Woman	 Man");
-    for (var i = 0; i < N; i++)
+    var resultContent = "WOMENS   ||  MENS \n";
+    for (var i = 0; i < N; i++){
         resultTable.innerHTML += `<tr>
                                     <td>${dict[i+N]}</td>
                                     <td>${dict[wPartner[i]]}</td>
                                 </tr>`
-
+        resultContent = resultContent + `${dict[i+N]} || ${dict[wPartner[i]]} \n`;
+    }
+    return resultContent;
 };   
 
-function makefile(prefer,dict){
+function makefile(prefer,dict,resultContent){
     document.getElementById("download-btn").style.display = "block";
 
     var l = prefer.length;
-    var content = {};
+    var content = "Preferences of Mens and Womens : \n";
     for(var i=0;i<l;i++){
-        var con = "";
+        var con = `${dict[i]} :: `;
         for(var j=0;j<l/2;j++){
             con = con + `${j+1}. ${dict[prefer[i][j]]} | `;
         }
-        content[dict[i]] = con;
+        content = content + con + "\n";
     }
-    console.log(content)
+    // content = JSON.stringify(content);
+    
+    content = content + "\n" + "Result: \n" + resultContent;
+    console.log(content);
     
     document.getElementById("download-btn").addEventListener("click",function(){
         
