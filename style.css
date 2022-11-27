@@ -7,8 +7,9 @@
 }
 
 nav {
-    background-image: linear-gradient(to right, #f24e4e, #deaa4a,
-            #e7e761, #54bf54, #5872da, #c671d8, #e977c7);
+    background-image: linear-gradient(to right, #f24e4ee3,
+     #deaa4adb, #e7e761d4,
+     #54bf54ab, #5872daba, #c671d8, #e977c7b0);
     display: flex;
 }
 
@@ -39,8 +40,9 @@ nav ul a:hover {
 }
 
 .info-div {
-    background-image: linear-gradient(to right, #f24e4e, #deaa4a,
-            #e7e761, #54bf54, #5872da, #c671d8, #e977c7);
+    background-image: linear-gradient(to right, #f24e4ee3,
+     #deaa4adb, #e7e761d4,
+     #54bf54ab, #5872daba, #c671d8, #e977c7b0);
 }
 
 .info-container {
@@ -81,8 +83,9 @@ nav ul a:hover {
 }
 
 .algorithm-div {
-    background-image: linear-gradient(to right, #f24e4e, #deaa4a,
-            #e7e761, #54bf54, #5872da, #c671d8, #e977c7);
+    background-image: linear-gradient(to right, #f24e4ee3,
+     #deaa4adb, #e7e761d4,
+     #54bf54ab, #5872daba, #c671d8, #e977c7b0);
 }
 
 .algorithm-div h1 {
@@ -343,8 +346,9 @@ hr {
 
 .footer-basic {
     padding: 40px 0;
-    background-image: linear-gradient(to right, #f24e4e, #deaa4a,
-            #e7e761, #54bf54, #5872da, #c671d8, #e977c7);
+    background-image: linear-gradient(to right, #f24e4ee3,
+     #deaa4adb, #e7e761d4,
+     #54bf54ab, #5872daba, #c671d8, #e977c7b0);
     color: #29292b;
 }
 
